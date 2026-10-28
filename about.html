@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kijjabwemi Secondary School | About Us</title>
+  <style>
+    :root { --primary: #1e3a8a; --secondary: #3b82f6; --accent: #f59e0b; --bg-light: #f3f4f6; --text-dark: #1f2937; --shadow: 0 4px 6px -1px rgba(0,0,0,0.1); --transition: all 0.3s ease; }
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, sans-serif; }
+    body { background: var(--bg-light); color: var(--text-dark); display: flex; flex-direction: column; min-height: 100vh; }
+    header { background: var(--primary); color: white; padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000; box-shadow: var(--shadow); }
+    .logo { font-size: 1.5rem; font-weight: bold; }
+    nav { display: flex; gap: 1rem; flex-wrap: wrap; }
+    nav a { color: white; text-decoration: none; padding: 0.5rem 1rem; border-radius: 4px; transition: var(--transition); font-weight: 500; }
+    nav a:hover, nav a.active { background: var(--secondary); transform: translateY(-2px); }
+    .menu-toggle { display: none; background: none; border: none; color: white; font-size: 1.5rem; cursor: pointer; }
+    .container { max-width: 1200px; margin: 2rem auto; padding: 0 1rem; flex: 1; }
+    .title { text-align: center; margin-bottom: 2rem; }
+    .title h1 { color: var(--primary); font-size: 2.5rem; margin-bottom: 0.5rem; }
+    .two { display: flex; gap: 2rem; align-items: center; flex-wrap: wrap; background: white; padding: 2rem; border-radius: 12px; box-shadow: var(--shadow); }
+    .two img { width: 100%; max-width: 400px; border-radius: 8px; object-fit: cover; }
+    .two > div { flex: 1; }
+    .info { background: #e0e7ff; padding: 1.5rem; border-radius: 8px; margin-top: 1rem; border-left: 5px solid var(--secondary); }
+    .info h3 { color: var(--primary); margin-bottom: 0.5rem; }
+    .info ul { list-style-position: inside; margin-left: 1rem; }
+    footer { background: var(--primary); color: white; text-align: center; padding: 2rem; margin-top: auto; }
+    footer a { color: var(--accent); text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+    @media (max-width: 768px) {
+      header { flex-direction: column; gap: 1rem; }
+      nav { display: none; flex-direction: column; width: 100%; text-align: center; }
+      nav.show { display: flex; }
+      .menu-toggle { display: block; position: absolute; top: 1rem; right: 1rem; }
+      .two { flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">Education For Nation Building</div>
+    <button class="menu-toggle" onclick="toggleMenu()">?</button>
+    <nav id="mainNav">
+      <a href="index.html">Home</a>
+      <a class="active" href="about.html">About</a>
+      <a href="school.html">School</a>
+      <a href="services.html">Services</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="offers.html">Offers</a>
+      <a href="contact.html">Contact</a>
+      <a href="faq.html">FAQ</a>
+    </nav>
+  </header>
+  <div class="container">
+    <div class="title">
+      <h1>About Kijjabwemi Secondary School</h1>
+      <p>Where education meets confidence.</p>
+    </div>
+    <div class="two">
+      <img src="2.jpg.jfif" alt="Quality education">
+      <div>
+        <h2>Our Story</h2>
+        <p style="margin-top: 1rem;">Kijjabwemi is a school that provides quality education, qualified teachers and computer education.</p>
+        <p style="margin-top: 1rem;">Our goal is to provide quality education that equips students with knowledge, skills, discipline and good morals.</p>
+        <div class="info">
+          <h3>Our Values</h3>
+          <ul>
+            <li>Equality</li>
+            <li>Hard work</li>
+            <li>Respect</li>
+            <li>Academic Excellence and self-confidence</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer>
+    <p>&copy; 2026 Kijjabwemi Secondary School. All rights reserved.</p>
+    <p style="margin-top: 0.5rem;"><a href="contact.html">Contact Us</a> | <a href="school.html">School</a></p>
+  </footer>
+  <script>
+    function toggleMenu() { document.getElementById('mainNav').classList.toggle('show'); }
+  </script>
+</body>
+</html>

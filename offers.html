@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kijjabwemi Secondary School | Offers</title>
+  <style>
+    :root { 
+      --primary: #1e3a8a; 
+      --secondary: #3b82f6; 
+      --accent: #f59e0b; 
+      --bg-light: #f3f4f6; 
+      --text-dark: #1f2937; 
+      --shadow: 0 4px 6px -1px rgba(0,0,0,0.1); 
+      --transition: all 0.3s ease; 
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+    body { background: var(--bg-light); color: var(--text-dark); display: flex; flex-direction: column; min-height: 100vh; }
+    
+    /* Header & Navigation */
+    header { background: var(--primary); color: white; padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000; box-shadow: var(--shadow); }
+    .logo { font-size: 1.5rem; font-weight: bold; }
+    nav { display: flex; gap: 1rem; flex-wrap: wrap; }
+    nav a { color: white; text-decoration: none; padding: 0.5rem 1rem; border-radius: 4px; transition: var(--transition); font-weight: 500; }
+    nav a:hover, nav a.active { background: var(--secondary); transform: translateY(-2px); }
+    .menu-toggle { display: none; background: none; border: none; color: white; font-size: 1.5rem; cursor: pointer; }
+
+    /* Main Content */
+    .container { max-width: 1200px; margin: 2rem auto; padding: 0 1rem; flex: 1; }
+    .title { text-align: center; margin-bottom: 2rem; }
+    .title h1 { color: var(--primary); font-size: 2.5rem; margin-bottom: 0.5rem; }
+    .title p { color: #555; font-size: 1.1rem; }
+
+    /* Grid & Cards */
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
+    .card { background: white; border-radius: 12px; overflow: hidden; box-shadow: var(--shadow); transition: var(--transition); display: flex; flex-direction: column; }
+    .card:hover { transform: translateY(-5px); box-shadow: 0 10px 15px -3px rgba(0,0,0,0.2); }
+    .card img { width: 100%; height: 200px; object-fit: cover; }
+    .card .content { padding: 1.5rem; flex: 1; display: flex; flex-direction: column; }
+    .card h2 { color: var(--primary); font-size: 1.25rem; margin-bottom: 0.5rem; }
+    .card p { color: #555; flex: 1; margin-bottom: 1rem; }
+    .card .price { font-weight: bold; color: var(--accent); font-size: 1.2rem; }
+
+    /* Footer */
+    footer { background: var(--primary); color: white; text-align: center; padding: 2rem; margin-top: auto; }
+    footer a { color: var(--accent); text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      header { flex-direction: column; gap: 1rem; }
+      nav { display: none; flex-direction: column; width: 100%; text-align: center; }
+      nav.show { display: flex; }
+      .menu-toggle { display: block; position: absolute; top: 1rem; right: 1rem; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">Education For Nation Building</div>
+    <button class="menu-toggle" onclick="toggleMenu()">?</button>
+    <nav id="mainNav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="school.html">School</a>
+      <a href="services.html">Services</a>
+      <a href="gallery.html">Gallery</a>
+      <a class="active" href="offers.html">Offers</a>
+      <a href="contact.html">Contact</a>
+      <a href="faq.html">FAQ</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <div class="title">
+      <h1>What Our School Provides</h1>
+      <p>Quality classroom education, qualified and dedicated teachers, computer studies, music, dance and drama, guidance and counselling.</p>
+    </div>
+
+    <div class="grid">
+      <div class="card">
+        <img src="3.jpg.jpg" alt="Our vision">
+        <div class="content">
+          <h2>Our Vision</h2>
+          <p>To become a leading school in Masaka and beyond.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="2.jpg.jfif" alt="Quality Education">
+        <div class="content">
+          <h2>Quality Education</h2>
+          <p>We provide quality teaching to help learners gain knowledge.</p>
+          <div class="price">UGX 800,000 / Term</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="1.jpg.jpeg" alt="Experienced Teachers">
+        <div class="content">
+          <h2>Experienced Teachers</h2>
+          <p>Our teachers guide and support learners to improve their academic performance.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="8.jpg" alt="Computer Studies">
+        <div class="content">
+          <h2>Computer Studies</h2>
+          <p>We help students develop computer skills and learn how to use technology.</p>
+          <div class="price">UGX 50,000 / Term</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="7.jpg" alt="Music, Dance and Drama">
+        <div class="content">
+          <h2>Music, Dance & Drama</h2>
+          <p>Encouraging creativity and talent through performing arts.</p>
+          <div class="price">UGX 30,000 / Term</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="6.jpg" alt="Guidance and Counselling">
+        <div class="content">
+          <h2>Guidance & Counselling</h2>
+          <p>Supporting the emotional and academic well-being of every student.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2026 Kijjabwemi Secondary School. All rights reserved.</p>
+    <p style="margin-top: 0.5rem;"><a href="contact.html">Contact Us</a> | <a href="school.html">School</a></p>
+  </footer>
+
+  <script>
+    function toggleMenu() { 
+      document.getElementById('mainNav').classList.toggle('show'); 
+    }
+  </script>
+</body>
+</html>
